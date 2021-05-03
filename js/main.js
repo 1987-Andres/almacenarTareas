@@ -59,7 +59,7 @@ function recogerDatosSearch(event) {
     }
 }
 
-guardar.addEventListener('click', recogerDatos);
+// guardar.addEventListener('click', recogerDatos);
 // function recogerDatos(event) {
 //     event.preventDefault();
 
