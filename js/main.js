@@ -46,3 +46,15 @@ function pintarPrioridad(event) {
         printTodasTareas(tareas);
     }
 }
+
+let search = document.querySelector('#search');
+search.addEventListener('input', recogerDatosSearch);
+
+function recogerDatosSearch(event) {
+    if (event.target.value !== "") {
+        let listaFiltrada = buscarPorPalabra(event.target.value, tareas);
+        printTodasTareas(listaFiltrada);
+    } else {
+        printTodasTareas(tareas);
+    }
+}

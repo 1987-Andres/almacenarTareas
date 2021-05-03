@@ -10,3 +10,12 @@ function filtrarPorPrioridad(pPrioridad, pListaPrioridades) {
     return listaFiltrada
 }
 
+function buscarPorPalabra(pPalabra, pLista) {
+    let palabra = pPalabra.toLowerCase().trim();
+    let listaFiltrada = pLista.filter(tareas => {
+        return tareas.titulo.toLowerCase().includes(palabra)
+    })
+
+    return listaFiltrada;
+
+}
