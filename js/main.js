@@ -7,17 +7,20 @@ function pintarUnaTarea(pTareaJson) {
     let div = document.createElement('div');
     let hr = document.createElement('hr');
 
+
     let contentH3 = document.createTextNode(`${pTareaJson.titulo}`);
 
     div.innerHTML = `
         <p>Id: ${pTareaJson.idTarea}</p>
-        <p>Prioridad: ${pTareaJson.prioridad}</p>`;
+        <p>Prioridad: ${pTareaJson.prioridad}</p>
+        <button data-id="1">borrar</button>`;
 
     h3.appendChild(contentH3);
-    //tirar todo dentro del article por orden
+
     article.appendChild(h3);
     article.appendChild(div)
     article.appendChild(hr);
+
 
     sectionTareas.appendChild(article);
 
@@ -50,6 +53,7 @@ function pintarPrioridad(event) {
 let search = document.querySelector('#search');
 search.addEventListener('input', recogerDatosSearch);
 
+
 function recogerDatosSearch(event) {
     if (event.target.value !== "") {
         let listaFiltrada = buscarPorPalabra(event.target.value, tareas);
@@ -59,17 +63,3 @@ function recogerDatosSearch(event) {
     }
 }
 
-// guardar.addEventListener('click', recogerDatos);
-// function recogerDatos(event) {
-//     event.preventDefault();
-
-//     const tareas = new Tarea(tareas.idTarea, tareas.titulo, tareas.prioridad);
-//     listaTareas.push(tarea);
-
-//     pintarTareas(listaTareas);
-// }
-
-// function pintarTareas(pLista) {
-//     tareas.innerHTML = ""
-//     pLista.forEach(tarea => tarea.pintarTarea(tareas))
-// }
