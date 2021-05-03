@@ -15,12 +15,12 @@ function pintarUnaTarea(pTareaJson) {
         <p>Prioridad: ${pTareaJson.prioridad}</p>
         <button data-id="1">borrar</button>`;
 
+
     h3.appendChild(contentH3);
 
     article.appendChild(h3);
     article.appendChild(div)
     article.appendChild(hr);
-
 
     sectionTareas.appendChild(article);
 

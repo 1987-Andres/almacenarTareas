@@ -19,7 +19,16 @@
         padding: 10px;
     }
 
+main #tareas article{
+  width: 100%;
+ 
+
+}
+
     main #tareas article p{
         display: none;
-        
+       
+    }
+    main #tareas article h3{
+        background-color: blueviolet;
     }
