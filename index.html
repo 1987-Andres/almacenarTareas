@@ -11,9 +11,21 @@
 </head>
 
 <body>
-    <header>
-        <div>
+
+    <div>
+        <form action="">
+            <input type="text" placeholder="titulo de la tarea" id="titulo">
             <select id="prioridad">
+                <option value="">Selecciona un prioridad</option>
+                <option value="diaria">Diaria</option>
+                <option value="mensual">Mensual</option>
+                <option value="urgente">Urgente</option>
+            </select>
+            <input type="submit" value="guardar" id="guardar">
+        </form>
+        <hr>
+        <div>
+            <select id="ordenar">
                 <option value="">Selecciona un prioridad</option>
                 <option value="diaria">Diaria</option>
                 <option value="mensual">Mensual</option>
@@ -21,19 +33,20 @@
             </select>
             <input type="text" id="search" placeholder="Buscar por diagnostico">
         </div>
-    </header>
-    <main>
-        <section id="tareas">
-            <!-- <article>
-                <h3>Nombre de la tarea</h3>
-                <div>
-                    <p>Id: Id</p>
-                    <p>Prioridad: Urgente</p>
-                </div>
-                <hr>
-            </article> -->
-        </section>
-    </main>
+        <main>
+            <section id="tareas">
+                <!-- <article>
+                    <h3>Nombre de la tarea</h3>
+                    <div>
+                        <p>Id: Id</p>
+                        <p>Prioridad: Urgente</p>
+                    </div>
+                    <hr>
+                </article> -->
+            </section>
+        </main>
+    </div>
+
 
 
 

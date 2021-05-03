@@ -32,7 +32,7 @@ function printTodasTareas(pListTareas) {
 
 printTodasTareas(tareas)
 
-let selectorPrioridad = document.querySelector('#prioridad');
+let selectorPrioridad = document.querySelector('#ordenar');
 
 selectorPrioridad.addEventListener('change', pintarPrioridad);
 
@@ -58,3 +58,18 @@ function recogerDatosSearch(event) {
         printTodasTareas(tareas);
     }
 }
+
+guardar.addEventListener('click', recogerDatos);
+// function recogerDatos(event) {
+//     event.preventDefault();
+
+//     const tareas = new Tarea(tareas.idTarea, tareas.titulo, tareas.prioridad);
+//     listaTareas.push(tarea);
+
+//     pintarTareas(listaTareas);
+// }
+
+// function pintarTareas(pLista) {
+//     tareas.innerHTML = ""
+//     pLista.forEach(tarea => tarea.pintarTarea(tareas))
+// }
