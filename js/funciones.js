@@ -19,3 +19,10 @@ function buscarPorPalabra(pPalabra, pLista) {
     return listaFiltrada;
 
 }
+
+function saveProduct(pNew, pList) {
+    pList.push(pNew);
+
+    pintarUnaTarea(pNew);
+
+}

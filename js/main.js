@@ -1,4 +1,6 @@
 let sectionTareas = document.querySelector('#tareas');
+let btnNuevaTarea = document.getElementById("guardar");
+let idActual;
 
 function pintarUnaTarea(pTareaJson) {
 
@@ -63,3 +65,30 @@ function recogerDatosSearch(event) {
     }
 }
 
+// switch (tareas.prioridad) {
+//     case "Diaria":
+//         h3.style.backgroundColor('red')
+//         break;
+//     case "Mensual":
+//         h3.style.backgroundColor('green')
+//         break;
+//     case "Urgente":
+//         h3.style.backgroundColor('blue')
+//         break;
+// }
+
+
+btnNuevaTarea.addEventListener('click', getDataForm);
+
+function getDataForm(event) {
+    event.preventDefault();
+    idActual++;
+    const newTarea = {
+        id: idActual,
+        titulo: titulo.value,
+        prioridad: prioridad.value,
+    }
+
+    saveProduct(newTarea, tareas)
+
+}
