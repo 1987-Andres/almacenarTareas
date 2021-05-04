@@ -29,6 +29,15 @@ main #tareas article{
         display: none;
        
     }
-    main #tareas article h3{
-        background-color: blueviolet;
+
+    .diaria{
+        background-color: aquamarine;
+    }
+
+    .mensual{
+        background-color:lightgreen;
+    }
+
+    .urgente{
+        background-color: tomato;
     }

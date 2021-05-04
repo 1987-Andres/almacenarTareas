@@ -1,5 +1,6 @@
 let sectionTareas = document.querySelector('#tareas');
 let btnNuevaTarea = document.getElementById("guardar");
+let btnBorrarTarea = document.getElementById("borrado");
 let idActual;
 
 function pintarUnaTarea(pTareaJson) {
@@ -14,8 +15,10 @@ function pintarUnaTarea(pTareaJson) {
 
     div.innerHTML = `
         <p>Id: ${pTareaJson.idTarea}</p>
-        <p>Prioridad: ${pTareaJson.prioridad}</p>
-        <button data-id="1">borrar</button>`;
+        <p>Prioridad: ${pTareaJson.prioridad}
+        </p><button id="borrado">borrar</button>
+        `;
+
 
 
     h3.appendChild(contentH3);
@@ -24,8 +27,9 @@ function pintarUnaTarea(pTareaJson) {
     article.appendChild(div)
     article.appendChild(hr);
 
-    sectionTareas.appendChild(article);
 
+    sectionTareas.appendChild(article);
+    article.classList.add(tareas.prioridad);
 }
 
 function printTodasTareas(pListTareas) {
@@ -65,22 +69,9 @@ function recogerDatosSearch(event) {
     }
 }
 
-// switch (tareas.prioridad) {
-//     case "Diaria":
-//         h3.style.backgroundColor('red')
-//         break;
-//     case "Mensual":
-//         h3.style.backgroundColor('green')
-//         break;
-//     case "Urgente":
-//         h3.style.backgroundColor('blue')
-//         break;
-// }
+btnNuevaTarea.addEventListener('click', guardarTarea);
 
-
-btnNuevaTarea.addEventListener('click', getDataForm);
-
-function getDataForm(event) {
+function guardarTarea(event) {
     event.preventDefault();
     idActual++;
     const newTarea = {
@@ -89,6 +80,21 @@ function getDataForm(event) {
         prioridad: prioridad.value,
     }
 
-    saveProduct(newTarea, tareas)
+    saveTarea(newTarea, tareas)
 
 }
+
+// btnBorrarTarea.addEventListener('click', borrarTarea);
+
+// function borrarTarea(event) {
+//     event.preventDefault();
+//     idActual--;
+//     const eliminarTarea = {
+//         id: idActual,
+//         titulo: titulo.value,
+//         prioridad: prioridad.value,
+//     }
+
+//     deleteTarea(eliminarTarea, tareas)
+
+// }

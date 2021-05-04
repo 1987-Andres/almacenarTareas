@@ -20,9 +20,20 @@ function buscarPorPalabra(pPalabra, pLista) {
 
 }
 
-function saveProduct(pNew, pList) {
+function saveTarea(pNew, pList) {
     pList.push(pNew);
 
     pintarUnaTarea(pNew);
-
 }
+
+// function deleteTarea(pBorrar, pList) {
+//     pList.push(pBorrar);
+
+//     pintarUnaTarea(pBorrar);
+// }
+
+// function deleteTarea(pList, pId) {
+//     let posicionBorrar = pList.findIndex(product => product.id === pId)
+//     products.splice(posicionBorrar, 1);
+//     console.log(products);
+// }
