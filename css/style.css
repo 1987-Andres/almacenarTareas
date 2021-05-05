@@ -41,3 +41,13 @@ main #tareas article{
     .urgente{
         background-color: tomato;
     }
+
+    li.daily {
+  background-color: red;
+}
+li.weekly {
+  background-color: yellow;
+}
+li.monthly {
+  background-color: green;
+}

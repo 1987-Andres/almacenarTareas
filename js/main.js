@@ -1,6 +1,6 @@
 let sectionTareas = document.querySelector('#tareas');
-let btnNuevaTarea = document.getElementById("guardar");
-let btnBorrarTarea = document.getElementById("borrado");
+let btnNuevaTarea = document.querySelector("#guardar");
+let divHola = document.querySelector(".hola");
 let idActual;
 
 function pintarUnaTarea(pTareaJson) {
@@ -8,6 +8,7 @@ function pintarUnaTarea(pTareaJson) {
     let article = document.createElement('article');
     let h3 = document.createElement('h3');
     let div = document.createElement('div');
+    div.classList.add("hola");
     let hr = document.createElement('hr');
 
 
@@ -15,11 +16,9 @@ function pintarUnaTarea(pTareaJson) {
 
     div.innerHTML = `
         <p>Id: ${pTareaJson.idTarea}</p>
-        <p>Prioridad: ${pTareaJson.prioridad}
-        </p><button id="borrado">borrar</button>
+        <p>Prioridad: ${pTareaJson.prioridad}</p>
+        <button id="borrado">borrar</button>
         `;
-
-
 
     h3.appendChild(contentH3);
 
@@ -84,17 +83,27 @@ function guardarTarea(event) {
 
 }
 
-// btnBorrarTarea.addEventListener('click', borrarTarea);
+// btnBorrarTarea.addEventListener('click', borrarElementos);
 
-// function borrarTarea(event) {
-//     event.preventDefault();
-//     idActual--;
-//     const eliminarTarea = {
-//         id: idActual,
-//         titulo: titulo.value,
-//         prioridad: prioridad.value,
-//     }
 
-//     deleteTarea(eliminarTarea, tareas)
+function llamarBotones() {
+    let borrar = document.querySelectorAll("#borrado");
+    for (let boton of borrar) {
+        boton.addEventListener('click', borrarElementos)
+    }
+}
 
-// }
+
+function borrarElementos(event) {
+
+    let article = event.target.parentNode;
+    let id = parseInt(article.dataset.idTarea);
+
+
+    article.parentNode.removeChild(divHola);
+
+    let position = tareas.findIndex(tarea => tarea.idTarea == id);
+
+    tareas.splice(position, 1);
+
+}

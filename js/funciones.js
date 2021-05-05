@@ -25,15 +25,3 @@ function saveTarea(pNew, pList) {
 
     pintarUnaTarea(pNew);
 }
-
-// function deleteTarea(pBorrar, pList) {
-//     pList.push(pBorrar);
-
-//     pintarUnaTarea(pBorrar);
-// }
-
-// function deleteTarea(pList, pId) {
-//     let posicionBorrar = pList.findIndex(product => product.id === pId)
-//     products.splice(posicionBorrar, 1);
-//     console.log(products);
-// }

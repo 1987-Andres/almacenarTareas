@@ -1,3 +1,9 @@
+const priority = {
+    DAILY: "daily",
+    WEEKLY: "weekly",
+    MONTHLY: "monthly",
+};
+
 const tareas = new Array(
     {
         idTarea: 1,
@@ -6,7 +12,7 @@ const tareas = new Array(
     },
     {
         idTarea: 2,
-        titulo: "Apirar la casa",
+        titulo: "Aspirar la casa",
         prioridad: "Mensual",
     },
     {
