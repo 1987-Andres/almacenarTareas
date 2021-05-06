@@ -1,27 +1,26 @@
 let sectionTareas = document.querySelector('#tareas');
 let btnNuevaTarea = document.querySelector("#guardar");
-let divHola = document.querySelector(".hola");
 let idActual;
 
 function pintarUnaTarea(pTareaJson) {
 
     let article = document.createElement('article');
+    article.dataset.id = pTareaJson.idTarea;
     let h3 = document.createElement('h3');
     let div = document.createElement('div');
-    div.classList.add("hola");
     let hr = document.createElement('hr');
-
-
+    let botonBorrar = document.createElement('button');
+    botonBorrar.addEventListener('click', borrarElementos);
+    botonBorrar.innerText = "borrar";
     let contentH3 = document.createTextNode(`${pTareaJson.titulo}`);
 
     div.innerHTML = `
         <p>Id: ${pTareaJson.idTarea}</p>
         <p>Prioridad: ${pTareaJson.prioridad}</p>
-        <button id="borrado">borrar</button>
         `;
 
     h3.appendChild(contentH3);
-
+    div.appendChild(botonBorrar);
     article.appendChild(h3);
     article.appendChild(div)
     article.appendChild(hr);
@@ -96,11 +95,11 @@ function llamarBotones() {
 
 function borrarElementos(event) {
 
-    let article = event.target.parentNode;
+    let article = event.target.parentNode.parentNode;
+    console.log(article);
+    article.remove();
     let id = parseInt(article.dataset.idTarea);
 
-
-    article.parentNode.removeChild(divHola);
 
     let position = tareas.findIndex(tarea => tarea.idTarea == id);
 
