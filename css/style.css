@@ -1,0 +1,49 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+
+  h1{background-color: aquamarine;
+    color: red;
+    text-align: center;
+    padding: 20px;
+}  
+
+    header div form {
+        background-color: lightgray;
+        padding: 10px;
+    }
+
+    header div div{
+        background-color: black;
+        padding: 10px;
+    }
+
+main #tareas article{
+  width: 100%;
+ 
+
+}
+
+    main #tareas article p{
+        display: none;
+       
+    }
+
+    .diaria{
+        background-color: aquamarine;
+    }
+
+    .mensual{
+        background-color:lightgreen;
+    }
+
+    .urgente{
+        background-color: tomato;
+    }
+
+    button{
+      width: 100px;
+      height: 50px;
+      margin-bottom:  10px;
+    }
