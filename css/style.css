@@ -30,7 +30,7 @@ main #tareas article{
        
     }
 
-    .diaria{
+    /* .diaria{
         background-color: aquamarine;
     }
 
@@ -40,7 +40,7 @@ main #tareas article{
 
     .urgente{
         background-color: tomato;
-    }
+    } */
 
     li.daily {
   background-color: red;
