@@ -6,6 +6,7 @@ function pintarUnaTarea(pTareaJson) {
 
     let article = document.createElement('article');
     article.dataset.id = pTareaJson.idTarea;
+    article.dataset.id = pTareaJson.prioridad;
     let h3 = document.createElement('h3');
     let div = document.createElement('div');
     let hr = document.createElement('hr');
@@ -81,8 +82,6 @@ function guardarTarea(event) {
     saveTarea(newTarea, tareas)
 
 }
-
-// btnBorrarTarea.addEventListener('click', borrarElementos);
 
 
 function llamarBotones() {
